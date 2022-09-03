@@ -29,7 +29,7 @@ local Tab3 = Window:MakeTab({
     PremiumOnly = false
 })
 OrionLib:MakeNotification({
-	Name = "New Version \ Release \ 7/8/2022",
+	Name = "Not Patched",
 	Content = "You will not get banned by this gui.",
 	Image = "rbxassetid://4483345998",
 	Time = 5
