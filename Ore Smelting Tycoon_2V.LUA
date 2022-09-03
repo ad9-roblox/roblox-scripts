@@ -425,42 +425,6 @@ Callback = function()
 end
 }) 
 
-Tab5:AddButton({ Name = "Anti-Admin | Test Script", 
-Callback = function() 
-
-    function kick()
-        game.Players.LocalPlayer:Kick()
-        end
-        
-        game.Players.PlayerAdded:Connect(function(plr)
-            if plr.UserId == 359752057 then
-                kicK()
-            end
-            if plr.UserId == 666487673 then
-                kick()
-            end
-            if plr.UserId == 122404304 then
-                kick()
-            end
-            if plr.UserId == 274648224 then
-                kick()
-            end
-            if plr.UserId == 2334753402 then
-                kick()
-            end
-            if plr.UserId == 380627588 then
-                kick()
-            end
-            if plr.UserId == 2888174376 then
-                kick()
-            end
-            if plr.UserId == 170257873 then
-                kick()
-            end
-        end)
-sent_message("Anti", "anti admin is working")
-end})
-
 
 OrionLib:Init()
 
