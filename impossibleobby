@@ -1,3 +1,11 @@
+--[[
+
+
+	Made For Impossible Glass Bridge Obby! (Squid Game)
+	             Free To Copy / Edit
+
+
+--]]
 game.Lighting.GlobalShadows = false
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("SIB / By Creator_Studio / Default / v1.4", "GrapeTheme")
