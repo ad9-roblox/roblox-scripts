@@ -9,7 +9,6 @@ function sent_message(title, text)
 	Time = 5
 })
 
-OrionLib:MakeNotification({ Name = "Something is broken with this game", Content = "this game need some fixes, not this gui", Image = "rbxassetid://4483345998", Time = 15 })
 end
 
 local Tab = Window:MakeTab({
