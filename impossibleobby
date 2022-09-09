@@ -6,29 +6,24 @@
 
 
 --]]
-game.Lighting.GlobalShadows = false
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("SIB / By Creator_Studio / Default / v1.4", "GrapeTheme")
+local Window = Library.CreateLib("Default / 1.5v", "GrapeTheme")
 local Tab = Window:NewTab("Obby")
-local Tab5 = Window:NewTab("Player")
 local Tab2 = Window:NewTab("Others")
-local UpdateLog = Window:NewTab("Changelog")
+local Tp = Window:NewTab("Teleport")
+local UpdateLog = Window:NewTab("Updates")
+local Tp2 = Tp:NewSection("Teleport")
 
 local change_log = UpdateLog:NewSection("Latest")
 
-change_log:NewLabel("Added Fps Boost in Others Tab")
-change_log:NewLabel("Pads Can Be Toggled")
-change_log:NewLabel("Added Fly")
-change_log:NewLabel("Added Inf Jump")
-change_log:NewLabel("Added Infinite Yield In Others Tab")
-
-change_log:NewButton("Copy Inf Yield Discord Invite", "ButtonInfo", function()
-	setclipboard("https://discord.gg/k83XZ9pEGU")
-end)
+change_log:NewLabel("Changed Title")
+change_log:NewLabel("Added Teleport Tab")
+change_log:NewLabel("Moved Go To End to Teleport Tab")
+change_log:NewLabel("Moved Player Tab To Others")
 
 
 local Section = Tab:NewSection("Main")
-local Section2 = Tab5:NewSection("Player")
+local Section2 = Tab2:NewSection("Player")
 local Sect = Tab2:NewSection("Others")
 local sp_S = Tab2:NewSection("Fps Boost")
 
@@ -114,7 +109,7 @@ Sect:NewButton("Inf Yield", "ButtonInfo", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 
-Section:NewToggle("Pads (Updated)", "ToggleInfo", function(state)
+Section:NewToggle("Pads", "ToggleInfo", function(state)
     if state then
         while true and task.wait() do
 for i,v in pairs(game:GetService("Workspace")["Glass Bridge"].GlassPane:GetDescendants()) do
@@ -138,9 +133,14 @@ Section:NewButton("Delete Check for State (Need)", "ButtonInfo", function()
 game.Workspace[game.Players.LocalPlayer.Name].VerifyForState:Destroy()
 end)
 
-Section:NewButton("Go To End", "ButtonInfo", function()
+Tp2:NewButton("Go To End", "ButtonInfo", function()
 	local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 	plr.CFrame = CFrame.new(1096, 65, 117)
+end)
+
+Tp2:NewTextBox("Teleport To", "TextboxInfo", function(txt)
+wait(0.25)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
 end)
 
 Section2:NewButton("Inf Jump", "ButtonInfo", function()
@@ -267,5 +267,3 @@ end)
 
 Fly()
 end)
-
-
