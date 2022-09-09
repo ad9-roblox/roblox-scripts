@@ -15,6 +15,7 @@ local UICorner_2 = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "gabsufaeyjkgasdbyghasdbjkyabuegaukdbs"
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
